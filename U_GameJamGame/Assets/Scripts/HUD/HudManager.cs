@@ -23,7 +23,7 @@ public class HudManager : MonoBehaviour
         if (enterDebug)
         {
             enterDebug = false;
-            EnterInteractRange();
+            EnterInteractRange("Debug Master Key");
         }
 
         if (leaveDebug)
@@ -34,9 +34,10 @@ public class HudManager : MonoBehaviour
     }
 
 
-    public void EnterInteractRange()
+    public void EnterInteractRange(string interactWith)
     {
         interactText.DOColor(visibleColor, animationDuration);
+        interactText.text = $"Pressione E para interagir com {interactWith}";
     }
 
     public void LeaveInteractRange()

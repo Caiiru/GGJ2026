@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Inputs")] private InputAction _moveAction;
-    [SerializeField] InputActionAsset moveActionAsset;
+    [Header("Inputs")] private PlayerInput _playerInput;
+    private InputAction _moveAction;
     [SerializeField] private float playerSpeed;
 
     [SerializeField] private Vector3 playerVelocity;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        _playerInput = GetComponent<PlayerInput>();
         BindActions();
         BindReferences();
 
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     void BindActions()
     {
-        _moveAction = moveActionAsset.FindAction("Move");
+        _moveAction = _playerInput.GetInputActionAsset().FindAction("Move");
     }
 
     void BindReferences()
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Vector2 inputValue = _moveAction.ReadValue<Vector2>();
- 
+
         Vector3 move = new Vector3(inputValue.x, 0, inputValue.y);
         move = transform.TransformDirection(move);
 

@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public Transform playerBody;
-    [Space] public Transform eyesTransform;
+    public Transform playerBody; 
     private Camera _playerCamera;
 
 
