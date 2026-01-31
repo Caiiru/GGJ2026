@@ -14,6 +14,7 @@ public class HudManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Transform optionsContent;
     public GameObject optionEntryPrefab;
+    public GameObject acuseEntryPrefab;
     public GameObject exitEntryPrefab;
 
 
@@ -85,6 +86,8 @@ public class HudManager : MonoBehaviour
             }
             break;
         }
+
+        Instantiate(acuseEntryPrefab, optionsContent);
         Instantiate(exitEntryPrefab, optionsContent);
     }
 

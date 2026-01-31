@@ -2621,6 +2621,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1295049020}
   optionsContent: {fileID: 109822599}
   optionEntryPrefab: {fileID: 1789196315340787689, guid: bd22deab4090aa54f8431a74484f0495, type: 3}
+  acuseEntryPrefab: {fileID: 4011102102756515107, guid: 95151fb93b5018f429221abc4dd0e2df, type: 3}
   exitEntryPrefab: {fileID: 5993138269055591149, guid: eb4b85d2754ddd84ea742db4c07be9e8, type: 3}
   enterDebug: 0
   leaveDebug: 0
