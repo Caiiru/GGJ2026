@@ -9,16 +9,15 @@ public class PlayerInteract : MonoBehaviour
 
     private HudManager _hudManager;
 
-    [SerializeField] private Interactable _interactableOnRange;
+    private Interactable _interactableOnRange;
 
-    private void Start()
+    private void OnEnable()
     {
-        _hudManager = HudManager.GetInstance();
         BindInteractAction();
     }
 
 
-    public void BindInteractAction()
+    private void BindInteractAction()
     {
         _playerInput = GetComponent<PlayerInput>();
         _interactAction = _playerInput.GetInputActionAsset().FindAction("Interact");
@@ -42,6 +41,7 @@ public class PlayerInteract : MonoBehaviour
 
     public void OnInteractRangeEnter(string interactableName, Interactable interactable)
     {
+        _hudManager = HudManager.GetInstance();
         _interactableOnRange = interactable;
         _hudManager.EnterInteractRange(interactableName);
     }

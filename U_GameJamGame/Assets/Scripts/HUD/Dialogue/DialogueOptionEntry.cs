@@ -5,15 +5,15 @@ using UnityEngine;
 public class DialogueOptionEntry : MonoBehaviour
 {
     public TextMeshProUGUI optionText;
-    private string dialogueUID;
+    private string _dialogueUID;
     public void ClickOption()
     {
-        DialogueManager.Instance.NextDialogue(dialogueUID);
+        DialogueManager.Instance.NextDialogue(_dialogueUID);
     }
 
     public void PopulateOption(OptionStruct dialogueOption)
     {
         optionText.text = dialogueOption.optionText;
-        dialogueUID = dialogueOption.UIDNextDialogue;
+        _dialogueUID = dialogueOption.UIDNextDialogue;
     }
 }

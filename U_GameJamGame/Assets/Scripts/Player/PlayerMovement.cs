@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     //References
     private CharacterController _characterController;
 
-    void Start()
+    void OnEnable()
     {
         _playerInput = GetComponent<PlayerInput>();
         BindActions();
@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     {
         GameManager.Instance.OnDialogueStarted += DisableMovement;
         GameManager.Instance.OnDialogueFinished += EnableMovement;
+
+        GameManager.Instance.OnGameStarted += EnableMovement;
     }
 
     void BindReferences()
@@ -62,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
     {
         GameManager.Instance.OnDialogueStarted -= DisableMovement;
         GameManager.Instance.OnDialogueFinished -= EnableMovement;
+        
+        GameManager.Instance.OnGameStarted -= EnableMovement;
     }
 
     private void Update()

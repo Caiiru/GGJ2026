@@ -14,6 +14,7 @@ public class HudManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Transform optionsContent;
     public GameObject optionEntryPrefab;
+    public GameObject acuseEntryPrefab;
     public GameObject exitEntryPrefab;
 
 
@@ -57,6 +58,7 @@ public class HudManager : MonoBehaviour
 
     public void CloseDialogue()
     {
+        if (dialogueGo == null) return;
         dialogueGo.SetActive(false);
     }
 
@@ -67,6 +69,7 @@ public class HudManager : MonoBehaviour
             Destroy(optionsContent.GetChild(i).gameObject);
         }
     }
+
     public void PopulateDialogue(SuspectNPC currentDialogueNPC, string currentDialogue)
     {
         Cleanup();
@@ -83,8 +86,11 @@ public class HudManager : MonoBehaviour
                 var entry = Instantiate(optionEntryPrefab, optionsContent);
                 entry.GetComponent<DialogueOptionEntry>().PopulateOption(dialogue.options[i]);
             }
+
             break;
         }
+
+        Instantiate(acuseEntryPrefab, optionsContent);
         Instantiate(exitEntryPrefab, optionsContent);
     }
 
