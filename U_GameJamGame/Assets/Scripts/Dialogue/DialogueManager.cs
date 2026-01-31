@@ -7,22 +7,35 @@ public class DialogueManager : MonoBehaviour
     public string currentDialogue;
 
     public SuspectNPC currentDialogueNPC;
-    private HudManager _hudManager;
+    [SerializeField] private HudManager _hudManager;
 
     private void Start()
     {
         BindEvent();
+
+        _hudManager = HudManager.GetInstance();
     }
 
     void BindEvent()
     {
         GameManager.Instance.OnDialogueStarted += EnterDialogue;
         GameManager.Instance.OnDialogueFinished += CloseDialogue;
+
+        GameManager.Instance.OnGameStarted += CloseDialogue;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.OnDialogueStarted -= EnterDialogue;
+        GameManager.Instance.OnDialogueFinished -= CloseDialogue;
+
+        GameManager.Instance.OnGameStarted -= CloseDialogue;
     }
 
 
     private async void EnterDialogue(object sender, EventArgs args)
     {
+        if (_hudManager == null) _hudManager = HudManager.GetInstance();
         try
         {
             if (args is EnterDialogueEventArgs eventArgs)
@@ -38,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         }
         catch (Exception e)
         {
-                Debug.LogError(e);
+            Debug.LogError(e);
         }
     }
 
@@ -46,12 +59,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (!currentDialogueNPC)
         {
-            
             Debug.LogError("Current NPC not finded");
             //UniTask.WaitUntilCanceled()
         }
 
-        _hudManager = HudManager.GetInstance();
 
         _hudManager.PopulateDialogue(currentDialogueNPC, currentDialogue);
 
@@ -66,6 +77,7 @@ public class DialogueManager : MonoBehaviour
 
     private void CloseDialogue(object o, EventArgs args)
     {
+        if (_hudManager == null) return;
         _hudManager.CloseDialogue();
     }
 

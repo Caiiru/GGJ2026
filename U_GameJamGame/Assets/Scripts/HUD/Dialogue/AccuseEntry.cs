@@ -5,6 +5,6 @@ public class AccuseEntry : MonoBehaviour
 
     public void Accuse()
     {
-        GameManager.Instance.AcusseCurrentNPC(DialogueManager.Instance.currentDialogueNPC);
+        _ = GameManager.Instance.AccuseCurrentNPC(DialogueManager.Instance.currentDialogueNPC);
     }
 }

@@ -13,7 +13,7 @@ public class PlayerCamera : MonoBehaviour
     private float _rotationX = 0f;
     public bool canLook = true;
 
-    private void Start()
+    private void OnEnable()
     {
         BindEvent();
         BindAction();
@@ -23,6 +23,17 @@ public class PlayerCamera : MonoBehaviour
     {
         GameManager.Instance.OnDialogueStarted += DisableLook;
         GameManager.Instance.OnDialogueFinished += EnableLook;
+
+        GameManager.Instance.OnGameStarted += EnableLook;
+    }
+
+    private void OnDisable()
+    {
+        
+        GameManager.Instance.OnDialogueStarted -= DisableLook;
+        GameManager.Instance.OnDialogueFinished -= EnableLook;
+
+        GameManager.Instance.OnGameStarted -= EnableLook;
     }
 
     void BindAction()

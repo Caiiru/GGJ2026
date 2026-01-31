@@ -58,6 +58,7 @@ public class HudManager : MonoBehaviour
 
     public void CloseDialogue()
     {
+        if (dialogueGo == null) return;
         dialogueGo.SetActive(false);
     }
 
@@ -68,6 +69,7 @@ public class HudManager : MonoBehaviour
             Destroy(optionsContent.GetChild(i).gameObject);
         }
     }
+
     public void PopulateDialogue(SuspectNPC currentDialogueNPC, string currentDialogue)
     {
         Cleanup();
@@ -84,6 +86,7 @@ public class HudManager : MonoBehaviour
                 var entry = Instantiate(optionEntryPrefab, optionsContent);
                 entry.GetComponent<DialogueOptionEntry>().PopulateOption(dialogue.options[i]);
             }
+
             break;
         }
 
