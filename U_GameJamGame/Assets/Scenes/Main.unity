@@ -562,6 +562,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerGo: {fileID: 1685687317}
+  assassinNPC: {fileID: 0}
+  suspectNPCS:
+  - {fileID: 1667740226}
+  - {fileID: 957469445}
 --- !u!4 &526432545
 Transform:
   m_ObjectHideFlags: 0

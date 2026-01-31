@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5603294676408153470}
   - component: {fileID: 8217469712345005197}
-  - component: {fileID: 1041585722500595399}
   - component: {fileID: 1218147781686461169}
+  - component: {fileID: 2511698243186070470}
   m_Layer: 5
-  m_Name: AcuseEntry
+  m_Name: AccuseEntry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,19 +47,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4011102102756515107}
   m_CullTransparentMesh: 1
---- !u!114 &1041585722500595399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4011102102756515107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17b07a196b9fcec4cba2250de37b9d90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueOptionEntry
-  optionText: {fileID: 3131785866148229690}
 --- !u!114 &1218147781686461169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +67,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2511698243186070470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011102102756515107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a56c660eb2a66c4f86a9b4b750a80ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccuseEntry
 --- !u!1 &4478326032692483785
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,9 +201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1041585722500595399}
-        m_TargetAssemblyTypeName: DialogueOptionEntry, Assembly-CSharp
-        m_MethodName: ClickOption
+      - m_Target: {fileID: 2511698243186070470}
+        m_TargetAssemblyTypeName: AccuseEntry, Assembly-CSharp
+        m_MethodName: Accuse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -326,7 +325,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57.1
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
