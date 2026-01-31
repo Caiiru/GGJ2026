@@ -10,12 +10,22 @@ public class HudManager : MonoBehaviour
     public Color visibleColor;
     public Color invisibleColor;
 
+    [Header("Dialogue")] public GameObject dialogueGo;
+
     [Header("Debug")] public bool enterDebug;
     public bool leaveDebug;
 
     private void Start()
     {
         interactText.color = invisibleColor;
+        dialogueGo.SetActive(false);
+        BindEvents();
+    }
+
+    private void BindEvents()
+    {
+        GameManager.Instance.OnDialogueStarted += OpenDialogue;
+        GameManager.Instance.OnDialogueFinished += CloseDialogue;
     }
 
     private void Update()
@@ -33,6 +43,21 @@ public class HudManager : MonoBehaviour
         }
     }
 
+    #region Dialogue System
+
+    public void OpenDialogue(object o, EventArgs e)
+    {
+        dialogueGo.SetActive(true);
+    }
+
+    public void CloseDialogue(object o, EventArgs e)
+    {
+        dialogueGo.SetActive(false);
+    }
+
+    #endregion
+
+    #region Interact Functions
 
     public void EnterInteractRange(string interactWith)
     {
@@ -44,6 +69,8 @@ public class HudManager : MonoBehaviour
     {
         interactText.DOColor(invisibleColor, animationDuration);
     }
+
+    #endregion
 
     #region Singleton
 

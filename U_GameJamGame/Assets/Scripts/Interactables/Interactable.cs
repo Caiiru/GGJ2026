@@ -19,7 +19,7 @@ public abstract class Interactable : MonoBehaviour
         HudManager.GetInstance().LeaveInteractRange();
     }
 
-    public void Interact()
+    public virtual void Interact()
     {
         Debug.Log($"Interact with " + interactText);
     }

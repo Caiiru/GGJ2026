@@ -4,26 +4,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerCamera : MonoBehaviour
 {
-    public Transform playerBody; 
+    public Transform playerBody;
     private Camera _playerCamera;
 
-
+    
     [Header("Look")] public float lookSensitivity = 100f;
     private InputAction _lookAction;
     private float _rotationX = 0f;
-
+    public bool canLook = true;
 
     private void Start()
     {
-        BindCamera();
+        BindEvent();
         BindAction();
     }
 
-    void BindCamera()
+    void BindEvent()
     {
-        
-        Cursor.lockState = CursorLockMode.Locked;
-        
+        GameManager.Instance.OnDialogueStarted += DisableLook;
+        GameManager.Instance.OnDialogueFinished += EnableLook;
     }
 
     void BindAction()
@@ -31,8 +30,20 @@ public class PlayerCamera : MonoBehaviour
         _lookAction = InputSystem.actions.FindAction("Look");
     }
 
+    void EnableLook(object sender, EventArgs args)
+    {
+        canLook = true;
+    }
+
+    void DisableLook(object sender, EventArgs args)
+    {
+        canLook = false;
+    }
+    
+    
     private void Update()
     {
+        if (!canLook) return;
         Vector2 lookValue = _lookAction.ReadValue<Vector2>();
         float mouseX = lookValue.x * lookSensitivity * Time.deltaTime;
         float mouseY = lookValue.y * lookSensitivity * Time.deltaTime;
