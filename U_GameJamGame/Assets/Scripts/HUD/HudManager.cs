@@ -11,6 +11,11 @@ public class HudManager : MonoBehaviour
     public Color invisibleColor;
 
     [Header("Dialogue")] public GameObject dialogueGo;
+    public TextMeshProUGUI dialogueText;
+    public Transform optionsContent;
+    public GameObject optionEntryPrefab;
+    public GameObject exitEntryPrefab;
+
 
     [Header("Debug")] public bool enterDebug;
     public bool leaveDebug;
@@ -24,8 +29,8 @@ public class HudManager : MonoBehaviour
 
     private void BindEvents()
     {
-        GameManager.Instance.OnDialogueStarted += OpenDialogue;
-        GameManager.Instance.OnDialogueFinished += CloseDialogue;
+        //GameManager.Instance.OnDialogueStarted += OpenDialogue;
+        //GameManager.Instance.OnDialogueFinished += CloseDialogue;
     }
 
     private void Update()
@@ -45,14 +50,42 @@ public class HudManager : MonoBehaviour
 
     #region Dialogue System
 
-    public void OpenDialogue(object o, EventArgs e)
+    public void OpenDialogue()
     {
         dialogueGo.SetActive(true);
     }
 
-    public void CloseDialogue(object o, EventArgs e)
+    public void CloseDialogue()
     {
         dialogueGo.SetActive(false);
+    }
+
+    private void Cleanup()
+    {
+        for (int i = 0; i < optionsContent.childCount; i++)
+        {
+            Destroy(optionsContent.GetChild(i).gameObject);
+        }
+    }
+    public void PopulateDialogue(SuspectNPC currentDialogueNPC, string currentDialogue)
+    {
+        Cleanup();
+        foreach (DialogueStruct dialogue in currentDialogueNPC.dialogueNPC)
+        {
+            if (dialogue.UID != currentDialogue)
+            {
+                continue;
+            }
+
+            dialogueText.text = dialogue.npcText;
+            for (int i = 0; i < dialogue.options.Count; i++)
+            {
+                var entry = Instantiate(optionEntryPrefab, optionsContent);
+                entry.GetComponent<DialogueOptionEntry>().PopulateOption(dialogue.options[i]);
+            }
+            break;
+        }
+        Instantiate(exitEntryPrefab, optionsContent);
     }
 
     #endregion

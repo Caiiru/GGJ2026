@@ -25,9 +25,15 @@ public class GameManager : MonoBehaviour
         return playerGo.transform;
     }
 
-    public void EnterOnDialogue()
+    public void EnterOnDialogue(SuspectNPC npc)
     {
-        OnDialogueStarted?.Invoke(this, EventArgs.Empty);
+        EnterDialogueEventArgs eventArgs = new EnterDialogueEventArgs
+        {
+            npc = npc,
+            UID = npc.StartDialogueUID
+        };
+
+        OnDialogueStarted?.Invoke(this,(EnterDialogueEventArgs)eventArgs);
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -54,4 +60,10 @@ public class GameManager : MonoBehaviour
     #endregion
 
     
+}
+
+public class EnterDialogueEventArgs : EventArgs
+{
+    public SuspectNPC npc;
+    public string UID; 
 }
