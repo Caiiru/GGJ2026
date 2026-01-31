@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public event EventHandler OnVictory;
     public event EventHandler OnLoose;
 
-    public event EventHandler OnGameStarted; 
+    public event EventHandler OnGameStarted;
 
     [Header("Game Loop")] public SuspectNPC assassinNPC;
 
@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Black screen fadeout not bound");
         }
- 
     }
 
     public Transform GetPlayerTransform()
@@ -69,7 +68,7 @@ public class GameManager : MonoBehaviour
         SelectRandomAssassin();
         blackScreenFadeout.color = new Color(0, 0, 0, 0);
         Cursor.lockState = CursorLockMode.Locked;
-        OnGameStarted?.Invoke(this,EventArgs.Empty);
+        OnGameStarted?.Invoke(this, EventArgs.Empty);
     }
 
     private void SelectRandomAssassin()
@@ -83,9 +82,16 @@ public class GameManager : MonoBehaviour
         assassinNPC = suspectNpcs[UnityEngine.Random.Range(0, suspectNpcs.Count)];
     }
 
+    private void ChangeCameraMainParent(Transform newParent)
+    {
+        if (Camera.main != null)
+            Camera.main.transform.SetParent(newParent);
+    }
+
     public async UniTask AccuseCurrentNPC(SuspectNPC currentNPC)
     {
         await ActivateBlackScreenFadeout();
+        ChangeCameraMainParent(this.transform);
         Debug.Log($"Accusing {currentNPC.name}");
         if (currentNPC == assassinNPC)
         {

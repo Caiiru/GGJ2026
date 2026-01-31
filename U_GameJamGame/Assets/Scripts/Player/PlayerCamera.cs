@@ -5,18 +5,18 @@ using UnityEngine.InputSystem;
 public class PlayerCamera : MonoBehaviour
 {
     public Transform playerBody;
-    private Camera _playerCamera;
 
-    
+
     [Header("Look")] public float lookSensitivity = 100f;
     private InputAction _lookAction;
     private float _rotationX = 0f;
     public bool canLook = true;
 
-    private void OnEnable()
+    private void Start()
     {
         BindEvent();
         BindAction();
+        canLook = false;
     }
 
     void BindEvent()
@@ -29,7 +29,6 @@ public class PlayerCamera : MonoBehaviour
 
     private void OnDisable()
     {
-        
         GameManager.Instance.OnDialogueStarted -= DisableLook;
         GameManager.Instance.OnDialogueFinished -= EnableLook;
 
@@ -43,6 +42,13 @@ public class PlayerCamera : MonoBehaviour
 
     void EnableLook(object sender, EventArgs args)
     {
+        if (Camera.main != null)
+        {
+            Camera.main.transform.SetParent(playerBody.GetChild(0));
+            Camera.main.transform.localPosition = Vector3.zero;
+            Camera.main.transform.localRotation = Quaternion.identity;
+        }
+
         canLook = true;
     }
 
@@ -50,8 +56,8 @@ public class PlayerCamera : MonoBehaviour
     {
         canLook = false;
     }
-    
-    
+
+
     private void Update()
     {
         if (!canLook) return;
