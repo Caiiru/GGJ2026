@@ -490,7 +490,8 @@ MonoBehaviour:
       UIDNextDialogue: S02
     - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
       UIDNextDialogue: S03
-  guiltyDialogue: []
+  dialogues: []
+  startDialogueUID: 00
 --- !u!54 &22771207
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1697,7 +1698,8 @@ MonoBehaviour:
       UIDNextDialogue: S02
     - optionText: "Como era sua conviv\xEAncia com a v\xEDtima?"
       UIDNextDialogue: S03
-  guiltyDialogue: []
+  dialogues: []
+  startDialogueUID: 00
 --- !u!54 &462758013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3738,7 +3740,8 @@ MonoBehaviour:
     - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do palanque
         superior. Voc\xEA as tem?"
       UIDNextDialogue: S04
-  guiltyDialogue: []
+  dialogues: []
+  startDialogueUID: 00
 --- !u!54 &957469446
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4812,6 +4815,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106688657}
   m_CullTransparentMesh: 1
+--- !u!1001 &1121890338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5264333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5499998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.72382
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000081460335
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 09adbb696ffb63846ad4f03b25557063, type: 2}
+    - target: {fileID: 919132149155446097, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
+      propertyPath: m_Name
+      value: Porta
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
 --- !u!1 &1274482003
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,6 +4988,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274482003}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1282495209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0bda3a5b274f3e048ae10f3d8654c8fc, type: 2}
+    - target: {fileID: 919132149155446097, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
+      propertyPath: m_Name
+      value: Tabua_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
 --- !u!1 &1295049018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5331,7 +5456,8 @@ MonoBehaviour:
       UIDNextDialogue: S02
     - optionText: "Com quem voc\xEA estava antes do acontecimento?"
       UIDNextDialogue: S03
-  guiltyDialogue: []
+  dialogues: []
+  startDialogueUID: 00
 --- !u!54 &1358348720
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6311,39 +6437,190 @@ MonoBehaviour:
       UIDNextDialogue: A02
     - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
       UIDNextDialogue: A03
-  guiltyDialogue:
-  - UID: AG01
-    npcText: Fala logo
-    options:
-    - optionText: "Como voc\xEA conhece a v\xEDtima? "
-      UIDNextDialogue: AG02
-    - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
-      UIDNextDialogue: AG03
-    - optionText: "Qual a rela\xE7\xE3o entre Joanna e sua esposa? "
-      UIDNextDialogue: AG04
-  - UID: AG02
-    npcText: "N\xE3o quero falar sobre nada disso. Meus filhos me esperam em casa.
-      Me deixe ir, por favor. "
-    options:
-    - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
-      UIDNextDialogue: AG03
-    - optionText: "Qual a rela\xE7\xE3o entre Joanna e sua esposa? "
-      UIDNextDialogue: AG04
-  - UID: AG03
-    npcText: "Estava fazendo exerc\xEDcios vocais com Afonso. Ele sempre me ajuda
-      com meus treinamentos. Est\xE1vamos em meu camarim "
-    options:
-    - optionText: "Como voc\xEA conhece a v\xEDtima? "
-      UIDNextDialogue: AG02
-    - optionText: "Qual a rela\xE7\xE3o entre Joanna e sua esposa? "
-      UIDNextDialogue: AG04
-  - UID: AG04
-    npcText: "N\xE3o sei nada sobre isso. "
-    options:
-    - optionText: "Como voc\xEA conhece a v\xEDtima? "
-      UIDNextDialogue: AG02
-    - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
-      UIDNextDialogue: AG03
+  dialogues:
+  - guiltyNPC: {fileID: 1667740226}
+    dialogue:
+    - UID: A01
+      npcText: Fala logo
+      options:
+      - optionText: "Como voc\xEA conhece a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
+        UIDNextDialogue: A03
+      - optionText: "Qual a rela\xE7\xE3o entre Joanna e sua esposa? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "N\xE3o quero falar sobre nada disso. Meus filhos me esperam em casa.
+        Me deixe ir, por favor. "
+      options:
+      - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
+        UIDNextDialogue: AG03
+      - optionText: "Qual a rela\xE7\xE3o entre Joanna e sua esposa? "
+        UIDNextDialogue: AG04
+    - UID: A03
+      npcText: "Estava fazendo exerc\xEDcios vocais com Afonso. Ele sempre me ajuda
+        com meus treinamentos. Est\xE1vamos em meu camarim "
+      options:
+      - optionText: "Como voc\xEA conhece a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Qual a rela\xE7\xE3o entre Joanna e sua esposa? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "N\xE3o sei nada sobre isso."
+      options:
+      - optionText: "Como voc\xEA conhece a v\xEDtima? "
+        UIDNextDialogue: AG02
+      - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
+        UIDNextDialogue: AG03
+  - guiltyNPC: {fileID: 462758012}
+    dialogue:
+    - UID: A01
+      npcText: Boa noite, camarada
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Estava no banheiro. Precisava me acalmar depois de uma discuss\xE3o
+        com Joanna. Ela disse coisas terr\xEDveis sobre Maria... sobre minha esposa
+        falecida. "
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: AG03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: AG04
+    - UID: A03
+      npcText: "P\xE9ssima. Ela destruiu minha vida. Mas meus filhos precisam de
+        mim, ent\xE3o n\xE3o posso fazer nada imprudente. "
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Afonso estava furioso hoje. Nunca o vi assim. Ele \xE9 sempre t\xE3o
+        alegre, mas Joanna o humilhou na frente de todos."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: AG02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima?"
+        UIDNextDialogue: AG03
+  - guiltyNPC: {fileID: 1358348719}
+    dialogue:
+    - UID: A01
+      npcText: Boa noite, detetive
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "No banheiro. A Joanna me tira do s\xE9rio quando pisa no meu p\xE9
+        no palco. Ela fazia isso de prop\xF3sito."
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Terr\xEDvel. Mas todos sabem disso. Eu tenho meus motivos. "
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "As discuss\xF5es foram mais frequentes com Viktoria no m\xEAs passado,
+        mas parece que est\xE1 tudo bem agora. At\xE9 pessoas calmas estavam perdendo
+        a compostura."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 957469445}
+    dialogue:
+    - UID: A01
+      npcText: Boa noite, camarada
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: No banheiro. Sempre no maldito banheiro.
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Horr\xEDvel. Escutei ela falando coisas horr\xEDveis da minha fam\xEDlia
+        pras bailarinas cobras que andam do lado dela. Pelo menos agora n\xE3o tenho
+        que aguentar aquela mocreia."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Ouvi algu\xE9m vagando pelos corredores, murmurando. O teatro deixa
+        as pessoas loucas."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 22771206}
+    dialogue:
+    - UID: A01
+      npcText: Boa noite, camarada
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+    - UID: A02
+      npcText: No banheiro
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+    - UID: A03
+      npcText: "P\xE9ssima. Todos sabem disso. Ela destruiu minha vida e matou minha
+        mulher\u2026 Mas ninguem ficou do meu lado. Traidores. Agora ela est\xE1
+        morta, at\xE9 que enfim. "
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+    - UID: A01
+      npcText: Boa noite, camarada
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+  startDialogueUID: A01
 --- !u!65 &1667740227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8449,3 +8726,5 @@ SceneRoots:
   - {fileID: 26700190}
   - {fileID: 1055726037}
   - {fileID: 1964602098}
+  - {fileID: 1121890338}
+  - {fileID: 1282495209}
