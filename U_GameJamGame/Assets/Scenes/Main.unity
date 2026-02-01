@@ -5893,7 +5893,7 @@ MonoBehaviour:
         UIDNextDialogue: A02
       - optionText: "Com quem voc\xEA estava antes do acontecimento?"
         UIDNextDialogue: A03
-  - guiltyNPC: {fileID: 1667740226}
+  - guiltyNPC: {fileID: 462758012}
     dialogue:
     - UID: A01
       npcText: 'Hum... '
@@ -5923,6 +5923,113 @@ MonoBehaviour:
     - UID: A04
       npcText: "N\xE3o\u2026 Eu passo boa parte do meu tempo sozinha no camarim.
         N\xE3o sa\xED at\xE9 a abertura das cortinas."
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 1358348719}
+    dialogue:
+    - UID: A01
+      npcText: "N\xE3o quero falar sobre"
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "\xC9ramos pr\xF3ximos na inf\xE2ncia. Nos afastamos quando adultas. "
+      options:
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: Estava aquecendo a voz em meu camarim. Estava sozinha.
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Lindolf tem as chaves do palanque. Seria o suspeito \xF3bvio."
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 957469445}
+    dialogue:
+    - UID: A01
+      npcText: Fale.
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "\xC9ramos pr\xF3ximos na inf\xE2ncia. Nos afastamos quando adultas."
+      options:
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: Estava aquecendo a voz em meu camarim. Estava sozinha.
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Isso \xE9 uma acusa\xE7\xE3o? Se tem algu\xE9m que faria isso aqui,
+        seria aquela crian\xE7a estranha. Ela fica observando a Joanna. Esquisita."
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 22771206}
+    dialogue:
+    - UID: A01
+      npcText: "N\xE3o"
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "\xC9ramos pr\xF3ximos na inf\xE2ncia. Nos afastamos quando adultas."
+      options:
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: Estava aquecendo a voz em meu camarim. Estava sozinha.
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Pessoas desesperadas fazem coisas desesperadas. Especialmente quando
+        a fam\xEDlia est\xE1 em jogo. Mas n\xE3o saberia dizer."
       options:
       - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
           com ela?"
