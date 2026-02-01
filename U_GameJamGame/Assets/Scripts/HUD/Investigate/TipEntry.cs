@@ -43,6 +43,8 @@ public class TipEntry : MonoBehaviour
         if (_tipImage != null)
             _tipText.color = new Color(0, 0, 0, 0);
         transform.localScale = Vector3.one;
-        isGuiltyTip = false;
+
+        if (isGuiltyTip)
+            gameObject.SetActive(false);
     }
 }

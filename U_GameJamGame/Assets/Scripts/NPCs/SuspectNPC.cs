@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SuspectNPC : Interactable
 {
     private SuspectNPC _guiltyNPC;
+    public Sprite defaultSprite;
     public Sprite guiltySprite;
     public string startDialogueUid = "A01";
     private Transform _playerTransform;
@@ -16,7 +18,7 @@ public class SuspectNPC : Interactable
 
 
     private void Start()
-    {
+    { 
         _playerTransform = GameManager.Instance.GetPlayerTransform();
     }
 
@@ -42,6 +44,12 @@ public class SuspectNPC : Interactable
         if (_guiltyNPC == this)
         {
             guiltySprite = _guiltyNPC.guiltySprite;
+            GetComponentInChildren<Image>().sprite = guiltySprite;
+        }
+        else
+        {
+            
+            GetComponentInChildren<Image>().sprite = defaultSprite;
         }
 
         startDialogueUid = "A01";

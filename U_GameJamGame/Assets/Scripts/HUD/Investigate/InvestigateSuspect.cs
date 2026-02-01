@@ -8,25 +8,53 @@ public class InvestigateSuspect : MonoBehaviour
     public Transform tipsContainer;
     public bool isGuilty = false;
     private Image _displayImage;
-    
+
     private void OnEnable()
     {
         _displayImage = GetComponent<Image>();
-        if (GameManager.Instance.assassinNPC == refNPC)
+        isGuilty = false;
+
+        for (int i = 0; i < tipsContainer.childCount; i++)
         {
-            Debug.Log(refNPC);
-            _displayImage.sprite = refNPC.guiltySprite;
-            isGuilty = true;
+            if (tipsContainer.GetChild(i).GetComponent<TipEntry>().isGuiltyTip)
+            {
+                Debug.Log("Found some guilty tip active");
+                if (tipsContainer.GetChild(i).gameObject.activeSelf)
+                    tipsContainer.GetChild(i).gameObject.SetActive(false);
+            }
         }
-        
+
+        _displayImage.sprite = refNPC.defaultSprite;
+
+        if (GameManager.Instance.assassinNPC != refNPC) return;
+        // if is guilty
+
+        _displayImage.sprite = refNPC.guiltySprite;
+        isGuilty = true;
+
+
+        for (int i = 0; i < tipsContainer.childCount; i++)
+        {
+            if (tipsContainer.GetChild(i).GetComponent<TipEntry>().isGuiltyTip)
+            {
+                tipsContainer.GetChild(i).gameObject.SetActive(true);
+            }
+        }
     }
 
     public void Reset()
     {
-        Debug.Log("Reset Boy boy oby");
         for (int i = 0; i < tipsContainer.childCount; i++)
         {
             tipsContainer.GetChild(i).GetComponent<TipEntry>().Reset();
+        }
+
+        for (int i = 0; i < tipsContainer.childCount; i++)
+        {
+            if (tipsContainer.GetChild(i).GetComponent<TipEntry>().isGuiltyTip)
+            {
+                tipsContainer.GetChild(i).gameObject.SetActive(false);
+            }
         }
     }
 }
