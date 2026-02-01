@@ -5856,7 +5856,79 @@ MonoBehaviour:
       UIDNextDialogue: S02
     - optionText: "Com quem voc\xEA estava antes do acontecimento?"
       UIDNextDialogue: S03
-  dialogues: []
+  dialogues:
+  - guiltyNPC: {fileID: 1667740226}
+    dialogue:
+    - UID: A01
+      npcText: 'Hum... '
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "\xC9ramos pr\xF3ximas na inf\xE2ncia. Nos afastamos quando adultas."
+      options:
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: Estava aquecendo a voz em meu camarim. Estava sozinha.
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "N\xE3o tenho nenhuma id\xE9ia de quem possa ter feito isso. Mas \xE9
+        o Lindolf que tem as chaves do palanque."
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 1667740226}
+    dialogue:
+    - UID: A01
+      npcText: 'Hum... '
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Complicada. Ela sempre me via como competi\xE7\xE3o."
+      options:
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: Estava sozinha aquecendo a voz.
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Entre n\xF3s, voc\xEA suspeita de algu\xE9m?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "N\xE3o\u2026 Eu passo boa parte do meu tempo sozinha no camarim.
+        N\xE3o sa\xED at\xE9 a abertura das cortinas."
+      options:
+      - optionText: "Voc\xEA era prima da v\xEDtima\u2026 Como era sua rela\xE7\xE3o
+          com ela?"
+        UIDNextDialogue: A02
+      - optionText: "Com quem voc\xEA estava antes do acontecimento?"
+        UIDNextDialogue: A03
 --- !u!54 &1358348720
 Rigidbody:
   m_ObjectHideFlags: 0
