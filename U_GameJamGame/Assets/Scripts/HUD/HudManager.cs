@@ -36,7 +36,8 @@ public class HudManager : MonoBehaviour
     private void OnEnable()
     {
         interactText.color = invisibleColor;
-        interactImage.color = invisibleColor;
+        // interactImage.color = invisibleColor;
+        interactImage.DOColor(invisibleColor, 0.1f);
         dialogueGo.SetActive(false);
         BindObjects();
         BindEvents();

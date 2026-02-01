@@ -95,11 +95,11 @@ public class GameOverManager : MonoBehaviour
     {
         backToMenuButton.SetActive(true);
         backToMenuButton.transform.localScale = Vector3.zero;
-        backToMenuButton.transform.DOScale(1, gameOverAnimationDuration).SetEase(Ease.OutElastic);
+        backToMenuButton.transform.DOScale(1, 1f).SetEase(Ease.OutElastic);
         
         
         retryButton.SetActive(true);
         retryButton.transform.localScale = Vector3.zero;
-        retryButton.transform.DOScale(1, gameOverAnimationDuration).SetEase(Ease.OutElastic);
+        retryButton.transform.DOScale(1, 1f).SetEase(Ease.OutElastic);
     }
 }
