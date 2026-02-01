@@ -14,6 +14,7 @@ public class HudManager : MonoBehaviour
 
     [Header("Dialogue")] public GameObject dialogueGo;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI suspectNameText;
     public Transform optionsContent;
     public GameObject optionEntryPrefab;
     public GameObject accuseEntryPrefab;
@@ -100,12 +101,14 @@ public class HudManager : MonoBehaviour
     public void OpenDialogue()
     {
         dialogueGo.SetActive(true);
+        interactText.DOColor(invisibleColor, 0.1f);
     }
 
     public void CloseDialogue()
     {
         if (dialogueGo == null) return;
         dialogueGo.SetActive(false);
+        interactText.DOColor(visibleColor, animationDuration);
     }
 
     private void Cleanup()
@@ -126,6 +129,7 @@ public class HudManager : MonoBehaviour
                 continue;
             }
 
+            suspectNameText.text = currentDialogueNPC.interactText;
             dialogueText.text = dialogue.npcText;
             for (int i = 0; i < dialogue.options.Count; i++)
             {
