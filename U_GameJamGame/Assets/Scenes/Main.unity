@@ -3729,18 +3729,194 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: 'Lindolf Monde '
-  dialogueNPC:
-  - UID: S01
-    npcText: Me deixe em paz
-    options:
-    - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
-      UIDNextDialogue: S02
-    - optionText: "Por que est\xE1 chorando?"
-      UIDNextDialogue: S03
-    - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do palanque
-        superior. Voc\xEA as tem?"
-      UIDNextDialogue: S04
-  dialogues: []
+  dialogueNPC: []
+  dialogues:
+  - guiltyNPC: {fileID: 957469445}
+    dialogue:
+    - UID: A01
+      npcText: "... \xC9 melhor voc\xEA ir embora"
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Ela era... snif... a antagonista... toda hist\xF3ria precisa de uma...
+        e toda trag\xE9dia precisa de um cl\xEDmax... "
+      options:
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "\xC9 uma tragedia\u2026. "
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Sim... snif... as chaves sempre estiveram comigo... eu protejo o
+        palanque... \xE9 minha responsabilidade... "
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 1667740226}
+    dialogue:
+    - UID: A01
+      npcText: "... O que voc\xEA quer?"
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Somos colegas\u2026\u2026. snif\u2026\u2026. oh Deus, quem faria
+        isso\u2026\u2026\u2026.. snif. Ela era apenas meio cruel\u2026\u2026 N\xE3o
+        merecia morrer\u2026.. oh mundo cruel\u2026.. "
+      options:
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Estou perplexo\u2026.. snif\u2026\u2026\u2026\u2026\u2026\u2026\u2026.
+        Nunca vi ningu\xE9m morrer\u2026.."
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Elas est\xE3o bem\u2026\u2026\u2026. \u2026\u2026 Oh n\xE3o! Onde
+        est\xE3o minhas chaves? Elas sumiram!"
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 462758012}
+    dialogue:
+    - UID: A01
+      npcText: "... O que voc\xEA quer?"
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "\xC9ramos colegas... snif... ela era dura comigo, mas n\xE3o merecia
+        isso... "
+      options:
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "\xC9 tudo t\xE3o triste... a morte, a trag\xE9dia... \xE9 como meu
+        personagem..."
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Sim, est\xE3o aqui... espere... falta uma! A reserva que fica no
+        camarim sumiu!"
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 1358348719}
+    dialogue:
+    - UID: A01
+      npcText: "Como posso ser \xFAtil?"
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: Colegas... snif... apenas colegas...
+      options:
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "A morte \xE9 t\xE3o triste... afinal..."
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Sim, est\xE3o aqui. Espere... algu\xE9m pegou a reserva ontem. Disseram
+        que precisavam verificar algo no sistema de cordas. N\xE3o lembro quem foi."
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 22771206}
+    dialogue:
+    - UID: A01
+      npcText: "... O que voc\xEA quer?"
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: Colegas... snif... apenas isso..
+      options:
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Tudo \xE9 t\xE3o triste... snif..."
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Ouvi dizer que voc\xEA \xE9 o respons\xE1vel pelas chaves do
+          palanque superior. Voc\xEA as tem?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Est\xE3o aqui... espere... a c\xF3pia reserva sumiu! Algu\xE9m que
+        conhece bem o palanque poderia ter pegado..."
+      options:
+      - optionText: "Qual era sua rela\xE7\xE3o com a v\xEDtima? "
+        UIDNextDialogue: A02
+      - optionText: "Por que est\xE1 chorando? "
+        UIDNextDialogue: A03
   startDialogueUID: 00
 --- !u!54 &957469446
 Rigidbody:
