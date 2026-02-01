@@ -41,7 +41,8 @@ public class DialogueManager : MonoBehaviour
             if (args is EnterDialogueEventArgs eventArgs)
             {
                 currentDialogueNPC = eventArgs.npc;
-                currentDialogue = eventArgs.UID;
+                // currentDialogue = eventArgs.UID;
+                currentDialogue = "A01";
             }
 
 
@@ -62,7 +63,6 @@ public class DialogueManager : MonoBehaviour
             Debug.LogError("Current NPC not finded");
             //UniTask.WaitUntilCanceled()
         }
-
 
         _hudManager.PopulateDialogue(currentDialogueNPC, currentDialogue);
 

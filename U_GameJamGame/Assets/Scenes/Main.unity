@@ -454,44 +454,193 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: Amanda Petrov
+  guiltyNPC: {fileID: 0}
+  startDialogueUid: A01
   dialogueNPC:
-  - UID: S01
-    npcText: "Eu... n\xE3o sei de nada"
-    options:
-    - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu? "
-      UIDNextDialogue: S02
-    - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
-      UIDNextDialogue: S03
-    - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
-        dias?"
-      UIDNextDialogue: S04
-  - UID: S02
-    npcText: "\u2026\u2026\u2026\u2026 \u2026\u2026\u2026\u2026\u2026\u2026\u2026
-      N\xE3o sei."
-    options:
-    - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
-      UIDNextDialogue: S03
-    - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
-        dias?"
-      UIDNextDialogue: S04
-  - UID: S03
-    npcText: "Eu\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.. ela era\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.
-      eu tinha medo\u2026\u2026\u2026.. e\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.."
-    options:
-    - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu? "
-      UIDNextDialogue: S02
-    - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
-        dias?"
-      UIDNextDialogue: S04
-  - UID: S04
-    npcText: "Eu\u2026\u2026\u2026.. eu vi. O Triste, ele estava l\xE1."
-    options:
-    - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu? "
-      UIDNextDialogue: S02
-    - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
-      UIDNextDialogue: S03
-  dialogues: []
-  startDialogueUID: 00
+  - UID: 
+    npcText: 
+    options: []
+  dialogues:
+  - guiltyNPC: {fileID: 1667740226}
+    dialogue:
+    - UID: A01
+      npcText: O-oi... tio detetive....
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "\u2026\u2026\u2026\u2026 \u2026\u2026\u2026\u2026\u2026\u2026\u2026
+        N\xE3o sei."
+      options:
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Eu\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.. ela era\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.
+        eu tinha medo\u2026\u2026\u2026.. e\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Eu\u2026\u2026\u2026.. eu vi. O Triste, ele estava l\xE1."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 462758012}
+    dialogue:
+    - UID: A01
+      npcText: "Eu... \xE9... Oi?"
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Eu... eu estava l\xE1 em cima... no meu esconderijo..."
+      options:
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Ela n\xE3o \xE9 muito gentil."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Vi o Palha\xE7o... ele n\xE3o estava feliz... ele subiu as escadas
+        bem r\xE1pido..."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 1358348719}
+    dialogue:
+    - UID: A01
+      npcText: ....
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Eu... estava no meu lugar... l\xE1 em cima..."
+      options:
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Ela era m\xE1... muito m\xE1..."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: A Sombra... ela subiu... vi ela subindo as escadas...
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 957469445}
+    dialogue:
+    - UID: A01
+      npcText: Eu acho que nunca mais vou conseguir dormir
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: Eu... sim... eu vi...
+      options:
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Ela era m\xE1... muito m\xE1 comigo..."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte dela nesses \xFAltimos
+          dias?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "O Triste... ele estava l\xE1... l\xE1 em cima... puxando a corda...
+        e chorando..."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 22771206}
+    dialogue:
+    - UID: A01
+      npcText: Eu... eu... eu... -
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte de algu\xE9m nesses
+          \xFAltimos dias?"
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "\u2026\u2026\u2026\u2026\u2026\u2026."
+      options:
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte de algu\xE9m nesses
+          \xFAltimos dias?"
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Ela... ela era... eu tinha muito medo dela... ela disse coisas...
+        sobre mam\xE3e... sobre meu irm\xE3o..."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Voc\xEA viu alguma atitude estranha da parte de algu\xE9m nesses
+          \xFAltimos dias?"
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Eu... n\xE3o sei... estava escondida..."
+      options:
+      - optionText: "Crian\xE7a, voc\xEA viu o que aconteceu?"
+        UIDNextDialogue: A02
+      - optionText: "Como era sua rela\xE7\xE3o com Joanna?"
+        UIDNextDialogue: A03
 --- !u!54 &22771207
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1658,6 +1807,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: Afonso Pobinski
+  guiltyNPC: {fileID: 0}
+  startDialogueUid: A01
   dialogueNPC:
   - UID: S01
     npcText: Bom dia senhor...
@@ -1698,8 +1849,197 @@ MonoBehaviour:
       UIDNextDialogue: S02
     - optionText: "Como era sua conviv\xEAncia com a v\xEDtima?"
       UIDNextDialogue: S03
-  dialogues: []
-  startDialogueUID: 00
+  dialogues:
+  - guiltyNPC: {fileID: 1667740226}
+    dialogue:
+    - UID: A01
+      npcText: Bom dia senhor..
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Eu estava nas coxias, costurando a manga que Joanna rasgou. Sabe\u2026
+        eu sinto muito pela morte de nossa colega, mas devo confessar que ela deixava
+        o ambiente do teatro muito pesado. \xC9 como se uma pedra fosse tirada das
+        minhas costas "
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Eu e Joanna n\xE3o \xE9ramos pr\xF3ximos. Ela n\xE3o gostava de mim,
+        mas eu n\xE3o tenho nada contra ela."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "N\xE3o me leve a mal, mas Joanna n\xE3o tinha muitos amigos. Ela
+        era cruel com todos do elenco. Estou feliz que n\xE3o tenho mais que lidar
+        com isso."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 1667740226}
+    dialogue:
+    - UID: A01
+      npcText: Bom dia senhor..
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Estava terminando de costurar minha manga. Fiquei no camarim at\xE9
+        o \xFAltimo momento. "
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: 'Sempre tentei ser gentil com todos, inclusive com ela. '
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Joanna rasgou de prop\xF3sito. Disse que eu roubaria a aten\xE7\xE3o
+        dela. Depois de tudo que fa\xE7o para alegrar este lugar..."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 1358348719}
+    dialogue:
+    - UID: A01
+      npcText: "Ol\xE1, amig\xE3o"
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: 'Estava nas coxias, costurando minha manga que Joanna rasgou. '
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Ela n\xE3o gostava de mim. Mas eu tentava manter a paz, como fa\xE7o
+        com todo mundo. Fazer as pessoas rirem \xE9 dif\xEDcil, sabe? "
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Vi algu\xE9m saindo do corredor que leva ao palanque. Parecia apressado."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 957469445}
+    dialogue:
+    - UID: A01
+      npcText: "Ol\xE1, amig\xE3o"
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: 'Nas coxias, costurando minha manga. '
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Ela me odiava. Dizia que eu roubava a aten\xE7\xE3o dela. Uma chata,
+        mas o p\xFAblico ama ela. Sinto falta da Maria. "
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Tem gente aqui que est\xE1 perdendo o controle. Joanna estava aumentando
+        a press\xE3o nos camarins. Motivos para todos n\xE3o faltam. Mas eu jamais
+        faria isso. "
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+  - guiltyNPC: {fileID: 22771206}
+    dialogue:
+    - UID: A01
+      npcText: "Sou seu amig\xE3oz\xE3o"
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A02
+      npcText: "Nas coxias, costurando a manga que a Joanna rasgou antes da pe\xE7a.
+        Ela era uma alma perversa."
+      options:
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A03
+      npcText: "Ela me odiava, s\xF3 porque divertia mais a plat\xE9ia. Espero que
+        tenha encontrado paz, onde quer que esteja."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
+          de qualquer outro membro do elenco? "
+        UIDNextDialogue: A04
+    - UID: A04
+      npcText: "Os ataques estavam piores. At\xE9 as crian\xE7as estavam sofrendo
+        mais que o normal."
+      options:
+      - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
+        UIDNextDialogue: A02
+      - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
+        UIDNextDialogue: A03
 --- !u!54 &462758013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3729,7 +4069,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: 'Lindolf Monde '
-  dialogueNPC: []
+  guiltyNPC: {fileID: 0}
+  startDialogueUid: A01
+  dialogueNPC:
+  - UID: 
+    npcText: 
+    options: []
   dialogues:
   - guiltyNPC: {fileID: 957469445}
     dialogue:
@@ -3917,7 +4262,6 @@ MonoBehaviour:
         UIDNextDialogue: A02
       - optionText: "Por que est\xE1 chorando? "
         UIDNextDialogue: A03
-  startDialogueUID: 00
 --- !u!54 &957469446
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4991,67 +5335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106688657}
   m_CullTransparentMesh: 1
---- !u!1001 &1121890338
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5264333
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5499998
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.72382
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.000000081460335
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 09adbb696ffb63846ad4f03b25557063, type: 2}
-    - target: {fileID: 919132149155446097, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
-      propertyPath: m_Name
-      value: Porta
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6781ec5566cb66b4cb06570f2c28fe4d, type: 3}
 --- !u!1 &1274482003
 GameObject:
   m_ObjectHideFlags: 0
@@ -5164,67 +5447,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274482003}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1282495209
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 0bda3a5b274f3e048ae10f3d8654c8fc, type: 2}
-    - target: {fileID: 919132149155446097, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
-      propertyPath: m_Name
-      value: Tabua_01
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f6f26dd18f27d2646afbb2e556aa1a65, type: 3}
 --- !u!1 &1295049018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5597,6 +5819,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: "Vikt\xF3ria Valencia"
+  guiltyNPC: {fileID: 0}
+  startDialogueUid: A01
   dialogueNPC:
   - UID: S01
     npcText: Viktoria, a seu dispor
@@ -5633,7 +5857,6 @@ MonoBehaviour:
     - optionText: "Com quem voc\xEA estava antes do acontecimento?"
       UIDNextDialogue: S03
   dialogues: []
-  startDialogueUID: 00
 --- !u!54 &1358348720
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6576,6 +6799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: Don Genaro
+  guiltyNPC: {fileID: 0}
+  startDialogueUid: A01
   dialogueNPC:
   - UID: A01
     npcText: Boa noite, detetive
@@ -6796,7 +7021,6 @@ MonoBehaviour:
       - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
           de qualquer outro membro do elenco? "
         UIDNextDialogue: A04
-  startDialogueUID: A01
 --- !u!65 &1667740227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8902,5 +9126,3 @@ SceneRoots:
   - {fileID: 26700190}
   - {fileID: 1055726037}
   - {fileID: 1964602098}
-  - {fileID: 1121890338}
-  - {fileID: 1282495209}

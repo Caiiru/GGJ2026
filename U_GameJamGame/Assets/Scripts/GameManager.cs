@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
         blackScreenFadeout.color = new Color(0, 0, 0, 0);
         Cursor.lockState = CursorLockMode.Locked;
         OnGameStarted?.Invoke(this, EventArgs.Empty);
+        InitializeSuspects();
     }
 
     private void SelectRandomAssassin()
@@ -83,12 +84,20 @@ public class GameManager : MonoBehaviour
         assassinNPC = suspectNpcs[UnityEngine.Random.Range(0, suspectNpcs.Count)];
         ChooseAssassinEventArgs choosenAssassinEventArgs = new ChooseAssassinEventArgs
         {
-            assassinNPC = this.assassinNPC
+            GuiltyNPC = assassinNPC
         };
-        OnAssassinWasChosen?.Invoke(this, choosenAssassinEventArgs);
-
-        Debug.Log($"The Guilty is.. {assassinNPC.name}");
+        // OnAssassinWasChosen?.Invoke(this, choosenAssassinEventArgs);
+        OnAssassinWasChosen?.Invoke(this, EventArgs.Empty);
     }
+
+    private void InitializeSuspects()
+    {
+        foreach (var suspect in suspectNpcs)
+        {
+            suspect.InitializeNPC();
+        }
+    }
+
 
     private void ChangeCameraMainParent(Transform newParent)
     {
@@ -142,9 +151,9 @@ public class GameManager : MonoBehaviour
         EnterDialogueEventArgs eventArgs = new EnterDialogueEventArgs
         {
             npc = npc,
-            UID = npc.startDialogueUID
+            UID = npc.startDialogueUid
         };
-        Debug.Log($"Enter dialogue: {npc.name},  UID: {npc.startDialogueUID}");
+        Debug.Log($"Enter dialogue: {npc.name},  UID: {npc.startDialogueUid}");
 
         OnDialogueStarted?.Invoke(this, (EnterDialogueEventArgs)eventArgs);
         Cursor.lockState = CursorLockMode.None;
@@ -184,5 +193,5 @@ public class EnterDialogueEventArgs : EventArgs
 
 public class ChooseAssassinEventArgs : EventArgs
 {
-    public SuspectNPC assassinNPC;
+    public SuspectNPC GuiltyNPC;
 }
