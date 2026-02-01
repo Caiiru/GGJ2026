@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public event EventHandler OnLoose;
 
     public event EventHandler OnGameStarted;
+    public event EventHandler OnAssassinWasChosen;
 
     [Header("Game Loop")] public SuspectNPC assassinNPC;
 
@@ -80,6 +81,13 @@ public class GameManager : MonoBehaviour
         }
 
         assassinNPC = suspectNpcs[UnityEngine.Random.Range(0, suspectNpcs.Count)];
+        ChooseAssassinEventArgs choosenAssassinEventArgs = new ChooseAssassinEventArgs
+        {
+            assassinNPC = this.assassinNPC
+        };
+        OnAssassinWasChosen?.Invoke(this, choosenAssassinEventArgs);
+
+        Debug.Log($"The Guilty is.. {assassinNPC.name}");
     }
 
     private void ChangeCameraMainParent(Transform newParent)
@@ -134,8 +142,9 @@ public class GameManager : MonoBehaviour
         EnterDialogueEventArgs eventArgs = new EnterDialogueEventArgs
         {
             npc = npc,
-            UID = npc.StartDialogueUID
+            UID = npc.startDialogueUID
         };
+        Debug.Log($"Enter dialogue: {npc.name},  UID: {npc.startDialogueUID}");
 
         OnDialogueStarted?.Invoke(this, (EnterDialogueEventArgs)eventArgs);
         Cursor.lockState = CursorLockMode.None;
@@ -171,4 +180,9 @@ public class EnterDialogueEventArgs : EventArgs
 {
     public SuspectNPC npc;
     public string UID;
+}
+
+public class ChooseAssassinEventArgs : EventArgs
+{
+    public SuspectNPC assassinNPC;
 }
