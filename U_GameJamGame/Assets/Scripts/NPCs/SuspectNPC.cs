@@ -7,6 +7,7 @@ public class SuspectNPC : Interactable
     private Transform _playerTransform;
 
     [Header("Dialogues")] public List<DialogueStruct> dialogueNPC;
+    public List<DialogueStruct> guiltyDialogue; 
     private string startDialogueUID="00";
     public string StartDialogueUID =>  startDialogueUID;
     private void Start()
