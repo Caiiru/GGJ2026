@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SuspectNPC : Interactable
 {
-    [SerializeField] private SuspectNPC guiltyNPC;
+    private SuspectNPC _guiltyNPC;
+    public Sprite guiltySprite;
     public string startDialogueUid = "A01";
     private Transform _playerTransform;
 
@@ -21,8 +22,7 @@ public class SuspectNPC : Interactable
 
     public void InitializeNPC()
     {
-        Debug.Log($"InitializeNPC.. {transform.name}");
-        guiltyNPC = GameManager.Instance.assassinNPC;
+        _guiltyNPC = GameManager.Instance.assassinNPC;
         SetDialogue();
     }
 
@@ -31,12 +31,17 @@ public class SuspectNPC : Interactable
     {
         foreach (DialogueBasedOnGuilty dialogue in dialogues)
         {
-            if (dialogue.guiltyNPC == this.guiltyNPC)
+            if (dialogue.guiltyNPC == this._guiltyNPC)
             {
                 dialogueNPC = dialogue.dialogue;
                 startDialogueUid = dialogue.dialogue[0].UID;
                 break;
             }
+        }
+        //SET SPRITE
+        if (_guiltyNPC == this)
+        {
+            guiltySprite = _guiltyNPC.guiltySprite;
         }
 
         startDialogueUid = "A01";

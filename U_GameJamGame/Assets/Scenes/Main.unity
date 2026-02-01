@@ -454,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: Amanda Petrov
-  guiltyNPC: {fileID: 0}
+  guiltySprite: {fileID: 21300000, guid: 9101fed03d430094197944cb5d34dac6, type: 3}
   startDialogueUid: A01
   dialogueNPC:
   - UID: 
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: Afonso Pobinski
-  guiltyNPC: {fileID: 0}
+  guiltySprite: {fileID: 21300000, guid: 8291089cbb98f2447b2339624ca757f8, type: 3}
   startDialogueUid: A01
   dialogueNPC:
   - UID: S01
@@ -4069,7 +4069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: 'Lindolf Monde '
-  guiltyNPC: {fileID: 0}
+  guiltySprite: {fileID: 21300000, guid: a4918f1001200924bbca89322dd2fa6f, type: 3}
   startDialogueUid: A01
   dialogueNPC:
   - UID: 
@@ -5819,7 +5819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: "Vikt\xF3ria Valencia"
-  guiltyNPC: {fileID: 0}
+  guiltySprite: {fileID: 21300000, guid: ec9fb0d0a7f6d0b488b70c6961360af9, type: 3}
   startDialogueUid: A01
   dialogueNPC:
   - UID: S01
@@ -6978,7 +6978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuspectNPC
   canInteract: 1
   interactText: Don Genaro
-  guiltyNPC: {fileID: 0}
+  guiltySprite: {fileID: 21300000, guid: 2e7733aa532184e4d8620a52303beb8d, type: 3}
   startDialogueUid: A01
   dialogueNPC:
   - UID: A01
@@ -7190,16 +7190,14 @@ MonoBehaviour:
         UIDNextDialogue: A02
       - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
         UIDNextDialogue: A03
-    - UID: A01
-      npcText: Boa noite, camarada
+    - UID: A04
+      npcText: "Sei l\xE1, mal vi Joanna essa semana. Estava ocupado ensaiando minhas
+        falas, diferente de alguns aqui."
       options:
       - optionText: "Onde voc\xEA estava no momento da abertura das cortinas?"
         UIDNextDialogue: A02
       - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
         UIDNextDialogue: A03
-      - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
-          de qualquer outro membro do elenco? "
-        UIDNextDialogue: A04
 --- !u!65 &1667740227
 BoxCollider:
   m_ObjectHideFlags: 0

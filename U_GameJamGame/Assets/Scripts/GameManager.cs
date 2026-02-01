@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     private async UniTask ActivateBlackScreenFadeout()
     {
-        Debug.Log("Black screen fadeout");
+        //Debug.Log("Black screen fadeout");
         blackScreenFadeout.DOColor(blackColor, blackScreenAnimDuration).SetEase(Ease.InBounce);
 
         await UniTask.WaitForSeconds(blackScreenAnimDuration);
@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
             npc = npc,
             UID = npc.startDialogueUid
         };
-        Debug.Log($"Enter dialogue: {npc.name},  UID: {npc.startDialogueUid}");
+        //Debug.Log($"Enter dialogue: {npc.name},  UID: {npc.startDialogueUid}");
 
         OnDialogueStarted?.Invoke(this, (EnterDialogueEventArgs)eventArgs);
         Cursor.lockState = CursorLockMode.None;
