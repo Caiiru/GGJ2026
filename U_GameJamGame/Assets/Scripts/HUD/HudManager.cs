@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks.Triggers;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -14,9 +16,13 @@ public class HudManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Transform optionsContent;
     public GameObject optionEntryPrefab;
-    public GameObject acuseEntryPrefab;
+    public GameObject accuseEntryPrefab;
     public GameObject exitEntryPrefab;
+    public GameObject investigateEntryPrefab;
 
+    [Header("Investigate")] public Transform investigateContent;
+    public GameObject investigateLayout;
+    private List<InvestigateSuspect> suspects;
 
     [Header("Debug")] public bool enterDebug;
     public bool leaveDebug;
@@ -25,29 +31,69 @@ public class HudManager : MonoBehaviour
     {
         interactText.color = invisibleColor;
         dialogueGo.SetActive(false);
+        BindObjects();
         BindEvents();
+    }
+
+    void BindObjects()
+    {
+        investigateLayout.SetActive(false);
+        suspects = new List<InvestigateSuspect>();
+        SuspectNPC guiltyNPC = GameManager.Instance.assassinNPC;
+        for (int i = 0; i < investigateContent.childCount; i++)
+        {
+            var sus = investigateContent.GetChild(i).GetComponent<InvestigateSuspect>();
+            if (sus == null) continue;
+
+
+            suspects.Add(sus);
+            if (guiltyNPC == sus.refNPC)
+            {
+                sus.isGuilty = true;
+            }
+        }
     }
 
     private void BindEvents()
     {
         //GameManager.Instance.OnDialogueStarted += OpenDialogue;
         //GameManager.Instance.OnDialogueFinished += CloseDialogue;
+        GameManager.Instance.OnLoose += ResetInvestigate;
+        GameManager.Instance.OnVictory += ResetInvestigate;
     }
 
-    private void Update()
+
+    #region InvestigateRegion
+
+    public void ResetInvestigate(object sender, EventArgs args)
     {
-        if (enterDebug)
+        foreach (var s in suspects)
         {
-            enterDebug = false;
-            EnterInteractRange("Debug Master Key");
-        }
-
-        if (leaveDebug)
-        {
-            leaveDebug = false;
-            LeaveInteractRange();
+            s.Reset();
+            s.gameObject.SetActive(false);
         }
     }
+
+    public void CleanupInvestigate()
+    {
+        foreach (var s in suspects)
+        {
+            s.gameObject.SetActive(false);
+        }
+    }
+
+    public void InvestigateSuspect(SuspectNPC suspect)
+    {
+        investigateLayout.SetActive(true);
+        foreach (var s in suspects)
+        {
+            if (s.refNPC != suspect) continue;
+
+            s.transform.gameObject.SetActive(true);
+        }
+    }
+
+    #endregion
 
     #region Dialogue System
 
@@ -90,7 +136,8 @@ public class HudManager : MonoBehaviour
             break;
         }
 
-        Instantiate(acuseEntryPrefab, optionsContent);
+        Instantiate(investigateEntryPrefab, optionsContent);
+        Instantiate(accuseEntryPrefab, optionsContent);
         Instantiate(exitEntryPrefab, optionsContent);
     }
 

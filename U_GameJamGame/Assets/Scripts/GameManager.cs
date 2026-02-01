@@ -69,8 +69,8 @@ public class GameManager : MonoBehaviour
         SelectRandomAssassin();
         blackScreenFadeout.color = new Color(0, 0, 0, 0);
         Cursor.lockState = CursorLockMode.Locked;
-        OnGameStarted?.Invoke(this, EventArgs.Empty);
-        InitializeSuspects();
+        OnGameStarted?.Invoke(this, EventArgs.Empty); 
+        InitializeSuspects(); 
     }
 
     private void SelectRandomAssassin()
