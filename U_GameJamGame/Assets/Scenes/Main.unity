@@ -886,6 +886,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TipEntry (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Sinto um sorriso atr\xE1s dessa m\xE1scara"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -905,7 +909,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1098650951}
+    m_TransformParent: {fileID: 425038250}
     m_Modifications:
     - target: {fileID: 269803435579295982, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Pivot.x
@@ -1491,6 +1495,10 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Ele cheira \xE0 poeira e suor"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2540,6 +2548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TipEntry (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Ele n\xE3o para de chorar"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3216,6 +3228,7 @@ RectTransform:
   - {fileID: 947697832}
   - {fileID: 718063126}
   - {fileID: 1425936799}
+  - {fileID: 81442044}
   m_Father: {fileID: 1098650951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4938,6 +4951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TipEntry (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Os sapatos est\xE3o empoeirados"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5216,6 +5233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TipEntry (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Os cal\xE7ados est\xE3o cobertos de poeira"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5320,6 +5341,10 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Parece que algu\xE9m fez um rasgo enorme na roupa do palha\xE7o"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6611,6 +6636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TipEntry (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: Ele esconde algo com certeza
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7232,6 +7261,10 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Os cal\xE7ados est\xE3o sujos empoeirados"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8264,8 +8297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -248.9, y: 0}
-  m_SizeDelta: {x: 600, y: 50}
+  m_AnchoredPosition: {x: -136.9, y: -14}
+  m_SizeDelta: {x: 825.6, y: 97.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083888820
 MonoBehaviour:
@@ -8750,7 +8783,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 425038250}
-  - {fileID: 81442044}
   m_Father: {fileID: 1500684149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -9041,7 +9073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "O cal\xE7ado est\xE1 sujo"
+  m_text: "H\xE1 um pouco de poeira no \nsapato"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9d5f6a93351ffb4595c540ff57e2c8b, type: 2}
   m_sharedMaterial: {fileID: 7798374920086388908, guid: d9d5f6a93351ffb4595c540ff57e2c8b, type: 2}
@@ -9324,6 +9356,11 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "As m\xE3os dela est\xE3o calejadas.. como se ela tivesse puxado algo
+        com muita for\xE7a"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9852,6 +9889,10 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Ela est\xE1 toda suja"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10935,6 +10976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TipEntry (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: A manga ta aberta e rasgada
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -11417,6 +11462,10 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "A voz dela est\xE1 tr\xEAmula e ofegante"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12021,9 +12070,9 @@ MonoBehaviour:
         Me deixe ir, por favor. "
       options:
       - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
-        UIDNextDialogue: AG03
+        UIDNextDialogue: A03
       - optionText: "Qual a rela\xE7\xE3o entre Joanna e sua esposa? "
-        UIDNextDialogue: AG04
+        UIDNextDialogue: A04
     - UID: A03
       npcText: "Estava fazendo exerc\xEDcios vocais com Afonso. Ele sempre me ajuda
         com meus treinamentos. Est\xE1vamos em meu camarim "
@@ -12036,9 +12085,9 @@ MonoBehaviour:
       npcText: "N\xE3o sei nada sobre isso."
       options:
       - optionText: "Como voc\xEA conhece a v\xEDtima? "
-        UIDNextDialogue: AG02
+        UIDNextDialogue: A02
       - optionText: "O que voc\xEA estava fazendo antes da abertura das cortinas? "
-        UIDNextDialogue: AG03
+        UIDNextDialogue: A03
   - guiltyNPC: {fileID: 462758012}
     dialogue:
     - UID: A01
@@ -12057,10 +12106,10 @@ MonoBehaviour:
         falecida. "
       options:
       - optionText: "Como era sua conviv\xEAncia com a v\xEDtima? "
-        UIDNextDialogue: AG03
+        UIDNextDialogue: A03
       - optionText: "Houve alguma intera\xE7\xE3o preocupante com Joanna da parte
           de qualquer outro membro do elenco? "
-        UIDNextDialogue: AG04
+        UIDNextDialogue: A04
     - UID: A03
       npcText: "P\xE9ssima. Ela destruiu minha vida. Mas meus filhos precisam de
         mim, ent\xE3o n\xE3o posso fazer nada imprudente. "
@@ -12075,9 +12124,9 @@ MonoBehaviour:
         alegre, mas Joanna o humilhou na frente de todos."
       options:
       - optionText: "Onde voc\xEA estava no momento da abertura das cortinas? "
-        UIDNextDialogue: AG02
+        UIDNextDialogue: A02
       - optionText: "Como era sua conviv\xEAncia com a v\xEDtima?"
-        UIDNextDialogue: AG03
+        UIDNextDialogue: A03
   - guiltyNPC: {fileID: 1358348719}
     dialogue:
     - UID: A01
@@ -13178,6 +13227,10 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: Ela parece estar cansada de correr
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15279,7 +15332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2047090682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15430,6 +15483,11 @@ PrefabInstance:
     - target: {fileID: 6948100176973094014, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: m_Name
       value: TipEntry (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "A roupa est\xE1 bagun\xE7ada.. como se ele estivesse feito um grande
+        esfor\xE7o"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15726,8 +15784,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250.9, y: 0}
-  m_SizeDelta: {x: 600, y: 50}
+  m_AnchoredPosition: {x: -282.9, y: 0}
+  m_SizeDelta: {x: 450, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107612659
 MonoBehaviour:
@@ -15749,7 +15807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Os cal\xE7ados est\xE3o com \npoeira"
+  m_text: "Os cal\xE7ados est\xE3o limpos \ne brilhando"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9d5f6a93351ffb4595c540ff57e2c8b, type: 2}
   m_sharedMaterial: {fileID: 7798374920086388908, guid: d9d5f6a93351ffb4595c540ff57e2c8b, type: 2}
@@ -16111,6 +16169,10 @@ PrefabInstance:
     - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
       propertyPath: isGuiltyTip
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741772601496863009, guid: 0856251695af72e43aa5d616d6ce2caa, type: 3}
+      propertyPath: guiltyTextTip
+      value: "Os cal\xE7ados est\xE3o empoeirados"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

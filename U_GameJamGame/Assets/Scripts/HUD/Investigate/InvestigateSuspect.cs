@@ -35,9 +35,14 @@ public class InvestigateSuspect : MonoBehaviour
 
         for (int i = 0; i < tipsContainer.childCount; i++)
         {
-            if (tipsContainer.GetChild(i).GetComponent<TipEntry>().isGuiltyTip)
+            TipEntry tipEntry =  tipsContainer.GetChild(i).GetComponent<TipEntry>();
+            if (tipEntry.isGuiltyTip)
             {
                 tipsContainer.GetChild(i).gameObject.SetActive(true);
+            }
+            else
+            {
+                tipEntry.suspectIsGuilty = true;
             }
         }
     }
