@@ -2,18 +2,23 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks.Triggers;
 using DG.Tweening;
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HudManager : MonoBehaviour
 {
     [Header("Interact Options")] public TextMeshProUGUI interactText;
+    public Image interactImage;
     public float animationDuration = 0.5f;
     public Color visibleColor;
     public Color invisibleColor;
 
     [Header("Dialogue")] public GameObject dialogueGo;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI suspectNameText;
     public Transform optionsContent;
     public GameObject optionEntryPrefab;
     public GameObject accuseEntryPrefab;
@@ -22,14 +27,17 @@ public class HudManager : MonoBehaviour
 
     [Header("Investigate")] public Transform investigateContent;
     public GameObject investigateLayout;
-    private List<InvestigateSuspect> suspects;
+    private List<InvestigateSuspect> _suspects;
+    
+    //Do Tween Reference
+    private TweenerCore<Color, Color, ColorOptions> _interactAnim;
+    
 
-    [Header("Debug")] public bool enterDebug;
-    public bool leaveDebug;
-
-    private void Start()
+    private void OnEnable()
     {
         interactText.color = invisibleColor;
+        // interactImage.color = invisibleColor;
+        interactImage.DOColor(invisibleColor, 0.1f);
         dialogueGo.SetActive(false);
         BindObjects();
         BindEvents();
@@ -38,7 +46,7 @@ public class HudManager : MonoBehaviour
     void BindObjects()
     {
         investigateLayout.SetActive(false);
-        suspects = new List<InvestigateSuspect>();
+        _suspects = new List<InvestigateSuspect>();
         SuspectNPC guiltyNPC = GameManager.Instance.assassinNPC;
         for (int i = 0; i < investigateContent.childCount; i++)
         {
@@ -46,7 +54,7 @@ public class HudManager : MonoBehaviour
             if (sus == null) continue;
 
 
-            suspects.Add(sus);
+            _suspects.Add(sus);
             if (guiltyNPC == sus.refNPC)
             {
                 sus.isGuilty = true;
@@ -62,12 +70,19 @@ public class HudManager : MonoBehaviour
         GameManager.Instance.OnVictory += ResetInvestigate;
     }
 
+    private void OnDisable()
+    {
+        
+        GameManager.Instance.OnLoose -= ResetInvestigate;
+        GameManager.Instance.OnVictory -= ResetInvestigate;
+    }
+
 
     #region InvestigateRegion
 
     public void ResetInvestigate(object sender, EventArgs args)
     {
-        foreach (var s in suspects)
+        foreach (var s in _suspects)
         {
             s.Reset();
             s.gameObject.SetActive(false);
@@ -76,7 +91,7 @@ public class HudManager : MonoBehaviour
 
     public void CleanupInvestigate()
     {
-        foreach (var s in suspects)
+        foreach (var s in _suspects)
         {
             s.gameObject.SetActive(false);
         }
@@ -85,7 +100,7 @@ public class HudManager : MonoBehaviour
     public void InvestigateSuspect(SuspectNPC suspect)
     {
         investigateLayout.SetActive(true);
-        foreach (var s in suspects)
+        foreach (var s in _suspects)
         {
             if (s.refNPC != suspect) continue;
 
@@ -100,12 +115,17 @@ public class HudManager : MonoBehaviour
     public void OpenDialogue()
     {
         dialogueGo.SetActive(true);
+        _interactAnim.Kill();
+        interactText.DOColor(invisibleColor, 0.1f);
+        interactImage.DOColor(invisibleColor, 0.1f);
     }
 
     public void CloseDialogue()
     {
         if (dialogueGo == null) return;
         dialogueGo.SetActive(false);
+        interactText.DOColor(visibleColor, animationDuration);
+        interactImage.DOColor(visibleColor, animationDuration);
     }
 
     private void Cleanup()
@@ -126,6 +146,7 @@ public class HudManager : MonoBehaviour
                 continue;
             }
 
+            suspectNameText.text = currentDialogueNPC.interactText;
             dialogueText.text = dialogue.npcText;
             for (int i = 0; i < dialogue.options.Count; i++)
             {
@@ -147,13 +168,16 @@ public class HudManager : MonoBehaviour
 
     public void EnterInteractRange(string interactWith)
     {
-        interactText.DOColor(visibleColor, animationDuration);
-        interactText.text = $"Pressione E para interagir com {interactWith}";
+         interactText.DOColor(visibleColor, animationDuration);
+          _interactAnim= interactImage.DOColor(visibleColor, animationDuration);
+        
+        // interactText.text = $"Pressione E para interagir com {interactWith}";
     }
 
     public void LeaveInteractRange()
     {
         interactText.DOColor(invisibleColor, animationDuration);
+        interactImage.DOColor(invisibleColor, animationDuration);
     }
 
     #endregion
