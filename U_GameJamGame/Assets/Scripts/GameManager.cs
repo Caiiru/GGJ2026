@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public event EventHandler OnLoose;
 
     public event EventHandler OnGameStarted;
+    public event EventHandler OnAssassinWasChosen;
 
     [Header("Game Loop")] public SuspectNPC assassinNPC;
 
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
         blackScreenFadeout.color = new Color(0, 0, 0, 0);
         Cursor.lockState = CursorLockMode.Locked;
         OnGameStarted?.Invoke(this, EventArgs.Empty);
+        InitializeSuspects();
     }
 
     private void SelectRandomAssassin()
@@ -80,7 +82,22 @@ public class GameManager : MonoBehaviour
         }
 
         assassinNPC = suspectNpcs[UnityEngine.Random.Range(0, suspectNpcs.Count)];
+        ChooseAssassinEventArgs choosenAssassinEventArgs = new ChooseAssassinEventArgs
+        {
+            GuiltyNPC = assassinNPC
+        };
+        // OnAssassinWasChosen?.Invoke(this, choosenAssassinEventArgs);
+        OnAssassinWasChosen?.Invoke(this, EventArgs.Empty);
     }
+
+    private void InitializeSuspects()
+    {
+        foreach (var suspect in suspectNpcs)
+        {
+            suspect.InitializeNPC();
+        }
+    }
+
 
     private void ChangeCameraMainParent(Transform newParent)
     {
@@ -109,7 +126,7 @@ public class GameManager : MonoBehaviour
 
     private async UniTask ActivateBlackScreenFadeout()
     {
-        Debug.Log("Black screen fadeout");
+        //Debug.Log("Black screen fadeout");
         blackScreenFadeout.DOColor(blackColor, blackScreenAnimDuration).SetEase(Ease.InBounce);
 
         await UniTask.WaitForSeconds(blackScreenAnimDuration);
@@ -134,8 +151,9 @@ public class GameManager : MonoBehaviour
         EnterDialogueEventArgs eventArgs = new EnterDialogueEventArgs
         {
             npc = npc,
-            UID = npc.StartDialogueUID
+            UID = npc.startDialogueUid
         };
+        //Debug.Log($"Enter dialogue: {npc.name},  UID: {npc.startDialogueUid}");
 
         OnDialogueStarted?.Invoke(this, (EnterDialogueEventArgs)eventArgs);
         Cursor.lockState = CursorLockMode.None;
@@ -171,4 +189,9 @@ public class EnterDialogueEventArgs : EventArgs
 {
     public SuspectNPC npc;
     public string UID;
+}
+
+public class ChooseAssassinEventArgs : EventArgs
+{
+    public SuspectNPC GuiltyNPC;
 }
