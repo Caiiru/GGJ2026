@@ -1,4 +1,6 @@
 using System;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,11 +11,24 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool canWalk = true;
     [SerializeField] private float playerSpeed;
     [SerializeField] private Vector3 playerVelocity;
+    private bool isWalking = false;
+
+    [SerializeField] private GameObject playerFoot;
+    public EventReference fmodWalkEvent;
+    private EventInstance walkInstance;
+
+    public StudioEventEmitter walkEmitter;
+    
 
     private readonly float _gravityValue = -9.81f;
 
     //References
     private CharacterController _characterController;
+
+    private void Start()
+    {
+        
+    }
 
     void OnEnable()
     {
@@ -72,7 +87,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canWalk) return;
         Vector2 inputValue = _moveAction.ReadValue<Vector2>();
+        if (inputValue != Vector2.zero && !isWalking)
+        {
+            isWalking = true;
+            // walkInstance.release();
+            walkEmitter.Play();
+            Debug.Log("release Audio");
 
+        }
+
+        if (inputValue == Vector2.zero && isWalking)
+        {
+            isWalking = false;
+            walkEmitter.Stop();
+            Debug.Log("stop audio");
+            // walkInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+ 
         Vector3 move = new Vector3(inputValue.x, 0, inputValue.y);
         move = transform.TransformDirection(move);
 
@@ -82,5 +113,6 @@ public class PlayerMovement : MonoBehaviour
         //Gravity
         playerVelocity.y = _gravityValue;
         _characterController.Move(playerVelocity * Time.deltaTime);
+        
     }
 }
